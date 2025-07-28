@@ -1,0 +1,6 @@
+-- insert transaction
+INSERT INTO Transaction(transaction_type, amount, to_account, performed_by, notes)
+VALUES ('DEPOSIT', 5000, :acct_id, :cust_id, 'Cash deposit');
+
+-- update account balance
+UPDATE Account SET balance = balance + 5000 WHERE account_id = :acct_id;
